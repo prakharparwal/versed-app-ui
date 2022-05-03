@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+
+.versed-header {
+  position: fixed;
+  top: 0;
+}
+
+.project-display-panel {
+  position: fixed;
+  top: 0;
+}

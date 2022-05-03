@@ -1,14 +1,23 @@
-import '../css/VersedHeader.css';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import PropTypes from 'prop-types'
 
-function VersedHeader() {
+function VersedHeader(props) {
     return (
-        <div className="wrapper">
-            <div className = "versed-app-header">
-            Versed App
-            </div>
-        </div>
-        
+        <Navbar bg="light" expand="lg">
+            <Container>
+                <Navbar.Brand href="#home">{props.title}</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+
     );
 }
+
+VersedHeader.prototype = {
+    title : PropTypes.string.isRequired
+};
 
 export default VersedHeader;
